@@ -12,7 +12,6 @@ shootings_df <- read.csv("~/Desktop/Mass-Shootings-Database.csv", stringsAsFacto
 shootings_df[shootings_df == "-"] <- NA
 shootings_df[shootings_df == "Unknown"] <- NA
 shootings_df[shootings_df == "TBD"] <- NA
-shootings_df
 
 num_shootings_df <- transform(shootings_df,
                                 total_victims = as.numeric(total_victims))
@@ -22,9 +21,8 @@ num_shootings_df <- transform(num_shootings_df,
                                 fatalities = as.numeric(fatalities))
 num_shootings_df <- transform(num_shootings_df, 
                                 age_of_shooter = as.numeric(age_of_shooter))
-str(num_shootings_df)
-mean(num_shootings_df$age_of_shooter, na.rm = TRUE)
-max(shootings_df$age_of_shooter, na.rm = TRUE)
+#str(num_shootings_df)
+
 
 #create more general column for gun type
 shootings <- num_shootings_df %>% mutate(gun_type = gsub(".*;.*","More Than One Type", weapon_type))

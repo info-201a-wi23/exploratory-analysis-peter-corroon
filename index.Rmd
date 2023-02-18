@@ -5,11 +5,14 @@ output: html_document
 
 ## Project title
 
-Give your project a concise, interesting title that summarizes the entirety of your project
+## “Uncovering the Patterns: Analyzing Mass Shootings in America since 1982”
 
 ### Authors
 
-Names of your team members
+- Claire Longcore (longcore@uw.edu)
+- Olivia Becker (olb5@uw.edu)
+- Michael Pham (mpham2@uw.edu)
+- Peter Corroon (pc238870@uw.edu) 
 
 ### Date
 
@@ -17,38 +20,86 @@ Winter 2022
 
 ### Abstract
 
-No more than three sentences that summarize your project. Focus on the very most important aspects. For example: (1) "Our main question is .... This question is important because .... To address the question, we will ...." (2) "We are concerned with ..., because .... To address this concern, we plan to ...." (3) "Consider that .... This is important because .... Accordingly, we plan to ...."
+The crux of our project is to ask what patterns and trends can be identified from mass shootings in this country over the last 40 years. This question holds importance as mass shootings have become an increasingly important topic of conversation and debate within America, sparking further discourse regarding school safety, gun control, and mental health among others. In order to address this question and think about ways to mitigate the number of future mass shootings, we will critically analyze a data set containing data from mass shootings since 1982 and search for commonalities among each incident. 
 
 ### Keywords
 
-3-5 keywords that summarize your project.
-(e.g., "Keywords: human physiology; bicycle exercise; Gen Z; times-series data")
+ - Mass Shootings
+ - Gun Violence
+ - Gun Control
+ - Mental Health
+ - Tragedy
 
 ### Introduction  
 
-Briefly introduce your project.  Include 3-5 research questions. What motivates the questions? Why are they important? (at least 200 words)
+Gun violence, and specifically mass shootings, are commonly brought up as an issue within the United States, along with extensive debate on how to deal with this issue. With the increase in media consumption and news circulating rapidly in today’s society, it can be easy to be very fearful of these incidents as their impact continues to be larger and larger. Even though mass shootings continue to be a recurring problem in this country, there have yet to be robust solutions that alleviate these incidents. Because of this, we have decided to examine a dataset covering mass shootings in the United States over the last 40 years in order to study patterns and trends that may prove beneficial when implementing solutions to this problem. In order to delve deeper into this data, we are looking to answer these questions:
+ 
+ - How has the frequency of mass shootings changed over time?
+ - How does the occurrence of mass shootings differ by location?
+ - How does the number of incidents change by gender?
+ - Does the type of weapon correlate with patterns in the number of dead or injured? 
+ - Are guns obtained in these shootings done so legally?
+ - Is there a connection between mass shootings and mental health issues?
+
+By further evaluating the context and factors behind mass shootings, better policies and protocols can be implemented to mitigate the number of mass shootings that happen as well as their severity. There is more complexity when it comes to gun violence that happens on a smaller level. Other factors can start to impact the analysis. That is why we have decided to begin answering the research questions that have been posed and work on a specific type of gun violence.
 
 ### Related Work  
 
-Describe your topic and related work in this space. You must include 3 citations to related work (URLs to similar work, high quality articles from the popular press, research papers, etc. ) Please use a standard citation style of your choice. (at least 200 words)
+Mass shootings, defined as incidents in which four or more people are shot and killed, have become a disturbingly common occurrence over time in the United States. According to data from the [Gun Violence Archive](https://www.gunviolencearchive.org/.), the number of mass shootings in the US has increased steadily since the 1980s, with a particularly sharp rise in recent years (Gun Violence Archive, 2023). This trend has led to intense debates about the relationship between mass shootings and gun control. The BBC article [“Gun violence in US and what the statistics tell us.”](https://www.bbc.com/news/world-us-canada-41488081.) Proponents of stricter gun laws argue that easier access to firearms contributes to the frequency of these incidents, while opponents claim that such laws do not effectively address the root causes of violence (BBC, 2023). 
+
+In addition to the debate about gun control, there is growing recognition of the importance of addressing mental health as well as substance abuse in the context of mass shootings. Mainstream media tends to link these violent instances with illness. An epidemiologic study titled ["Mental illness and reduction of gun violence and suicide: bringing epidemiologic research to policy."](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4211925/#.) performed by Swanson et al. (2015) shows that this association is oftentimes misleading and that those who suffer from mental illness are not always violent, but are at higher risk for suicide which accounts for over half the nation's gun-related deaths. While it is not accurate to suggest that mental illness is a key cause of mass shootings, addressing the needs of those struggling with mental health challenges is seen by some as an important step in reducing the frequency of these incidents. 
+
+It is clear that mass shootings are a complex issue with no simple solution. Addressing gun control, mental health, and other potential influencers is crucial to mitigating the frequency of these devastating incidents. Further research and policies are needed to better understand the underlying causes of mass shootings and to develop effective interventions to prevent them.
+
+**References:**
+
+“Gun Violence Archive 2023.” *Gun Violence Archive*, 2 Feb. 2023, https://www.gunviolencearchive.org/. 
+
+“Gun violence in US and what the statistics tell us.” *BBC*, 24 Jan. 2023, https://www.bbc.com/news/world-us-canada-41488081. 
+
+Swanson, Jeffrey W., et al. “Mental illness and reduction of gun violence and suicide: bringing epidemiologic research to policy.” *Annals of Epidemiology*, vol. 25, no.5, 2015, pp. 366-376. *National Library of Medicine*, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4211925/#. 
 
 ### The Dataset
 
-Where did you find the data? Please include a link to the data source  
-Who collected the data?  
-How was the data collected or generated?  
-Why was the data collected?  
-How many observations (rows) are in your data?  
-How many features (columns) are in the data?  
-What, if any, ethical questions or questions of power do you need to consider when working with this data?  
-What are possible limitations or problems with this data?   (at least 200 words)
+
+> Where did you find the data? Please include a link to the data source  
+
+The data set we are using is called “Mother Jones - Mass Shootings Database, 1982 - 2023.” We found this data set on the [Mother Jones website.](https://www.motherjones.com/politics/2012/12/mass-shootings-mother-jones-full-data/)
+
+> Who collected the data?  
+
+This data was collected by Mark Follman, Gavin Aronsen, and Deanna Pan. Follman is the national affairs editor and is a longtime investigator into mass shootings, culminating in a book on how to stop them. Aronsen is also a longtime journalist who now works at the Iowa Informer. Pan is a feature writer who now works at the Boston Globe but in 2012 and 2013 served as a Senior Editorial Fellow at Mother Jones. 
+
+> How was the data collected or generated? 
+
+This data was collected via news reports, sometimes local (SF Chronicle) and sometimes national (WaPo, NYTimes), to give dates and victim counts of each shooting. The creators researched for events that matched the criteria: the attack must have occurred in a single incident and a public place; not a crime of armed robbery, gang violence, or domestic violence in a home, focusing on cases where the motive appeared to be indiscriminate mass murder; and the killer, according to FBI criteria, had to have taken the lives of at least four people. 
+
+> Why was the data collected?  
+
+This dataset was initially created in the aftermath of the movie theater massacre in Aurora, Colorado. The creators state that many other similar datasets aren’t as specific for what one would normally constitute as a mass shooting, and often include various other gun crimes resulting in multiple victims. The creators wanted to document U.S. mass shootings more specifically through an open-source database in an attempt to further evaluate the factors involved in these phenomena, such as the firearms used or mental health connections. 
+
+>How many observations (rows) are in your data?  
+
+There are 139 mass shootings recorded in our data set, each represented by a row (We got this approved by our TA).
+
+> How many features (columns) are in the data? 
+
+There are 24 columns in our data set used to describe various features of each incident including, but not limited to, location, year, shooter characteristics, number of victims, the weapon used, mental health issues, etc. 
+
+> What, if any, ethical questions or questions of power do you need to consider when working with this data? 
+
+There are some ethical questions regarding the use of data that references victims who are no longer alive. While this data does not include any personal information regarding those victims, it is a sensitive topic nonetheless and should be treated as such. There may be some questions of power that concern the creators of this data set. It is important to evaluate who they might be, how they collected this data, and their intentions of creating this data set. 
+
+> What are possible limitations or problems with this data?   (at least 200 words)
+
+There are some limitations of this data set. The original criteria of a mass shooting established by the FBI in 2005 is a shooting by a lone killer in a public place who has killed four or more people. In 2013, the FBI requirement for a shooting to qualify as ‘mass’ was decreased from four to three people, resulting in a change of the baseline for which shootings are included in this dataset. Shootings pre-2013 that resulted in the deaths of three people are not included, despite the fact that they would have been included had they happened post-2013, which on some level leaves time-series changes comparing apples to oranges. The data also excludes violence stemming from armed robbery or gang violence, as well as ones where the shooter has not been identified, narrowing this data set to very specific criteria. The authors admit that this is a conservative estimate of shootings. The authors also do not define how they made a determination of “a prior history of mental health issues” and what counts or does not count for that. The most recent shootings (2022-2023) generally have less information than older shootings and do not define mental health status. Even for the older shootings in the data set, “Unclear” is also a given answer to if the shooter had any prior signs of mental health which is not a determinate answer and can be hard to draw conclusions and analysis from. 
 
 ### Implications
 
-Assuming you answer your research questions, briefly describe the expected or possible implications for technologists, designers, and policymakers. (at least 150 words)
+Analyzing potential patterns from mass shooting data over the last 40 years, looking at variables such as location, the type of weapon used, the legality of its attainment, mental health, etc., can provide useful information for policymakers and individuals across the United States. These trends and patterns can serve as valuable information for legal officials to identify risk factors and potential warning signs for future incidents, and ask why these commonalities might exist among suspects. This information can help inform the development of targeted and effective intervention and prevention strategies, such as addressing access to firearms, improving mental health services, and strengthening community resilience. Additionally, data analysis can help evaluate the effectiveness of existing policies and guide the allocation of resources to areas of highest need. Analyzing this data set and generating findings from it may also be useful for individuals who may not have the capability or time to go through the data set themselves. We hope that our project helps to summarize and reveal the patterns from the data set in a more comprehensive way for individuals to understand and interpret. 
 
 ### Limitations & Challenges
-What challenges or limitations might you need to address with your project idea more broadly? Briefly discuss. (at least 150 words)
+The concept of mass shootings used to be a very broad term. It was only recently defined by the FBI and leading criminologists in 2005 as a single attack in a public place in which four or more victims were killed. Therefore, when data was originally compiled in or before 2012, it followed the criteria of having four or more deaths. However, in 2013 President Barack Obama authorized a federal investigation for mass shootings mandate that lowered the baseline to three or more deaths. Data collected in January of 2013 and on only has to meet the criteria of having three deaths. This change in the definition of a mass shooting poses a challenge when working with mass shooting data as the criteria for what classifies as a mass shooting has altered over time. This change needs to be accounted for and addressed when analyzing mass shooting data, as there is the possibility of missing data that meets the current criteria of three or more deaths, but the event occurred before 2013 so it is not included in the data set.
 
 ### Summary Information
 
@@ -69,13 +120,16 @@ Describe why you chose this chart and what information it reveals
 Here's an example of how to run an R script inside an RMarkdown file:
 
 ``````{r, echo = FALSE, code = readLines("chart1_example.R")}
-```
+``````
 
 ### Chart 2
 
-Include a chart
 
-Describe why you chose this chart and what information it reveals
+``````{r message = FALSE, warning = FALSE, echo = FALSE, code = readLines("chart2.R") }
+
+``````
+
+We chose to visualize the number of deaths and injuries by gun type in order to determine which weapon results in the worst casualties. We specifically wanted to depict the difference between semiautomatic weapons and automatic weapons. As seen in the chart, semiautomatic weapons resulted in the most deaths and injuries, with semiautomatic handguns having the most casualties for mass shootings where only one tpye of weapon was used. We can also see that when more than one type of weapon was used the total number of casualties almost triples, but interestingly this is mostly due to an increase in injuries not deaths. 
 
 ### Chart 3
 
