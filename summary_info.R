@@ -11,6 +11,7 @@ library("ggplot2")
 ms_df <- read.csv("~/Desktop/mass-shootings.csv", stringsAsFactors = FALSE) %>% 
   filter(year != "2023") 
 
+View(ms_df)
 #Add NA where there are missing values in the dataset; fix total_victims for "Tulsa medical center shooting"
 ms_df[ms_df == "-"] <- NA
 ms_df[ms_df == "Unknown"] <- NA
@@ -44,13 +45,16 @@ summary_info$school_shootings <- ms_df %>%
 summary_info$year_most_shootings <- ms_df %>% 
   group_by(year) %>% 
   summarize(count = n()) %>% 
-  filter(count == max(count)) %>% 
-  pull(year, count)
+  filter(count == max(count)) 
 
 #Calculate which case had the highest number of total victims, how many were there?
 summary_info$case_most_victims <- ms_df %>% 
-  filter(fatalities == max(fatalities)) %>% 
-  pull(case, total_victims)
+  filter(total_victims == max(total_victims)) %>% 
+  pull(case)
+
+summary_info$case_most_victims_amount <- ms_df %>% 
+  filter(total_victims == max(total_victims)) %>% 
+  pull(total_victims)
 
 #Calculate the percentage of of cases that used semiautomatic weapons
 num_shootings_semiauto <- ms_df %>% 

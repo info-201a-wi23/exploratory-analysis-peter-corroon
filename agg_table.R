@@ -21,6 +21,10 @@ ms_df[ms_df == "TK"] <- 4
 ms_df$injured = as.numeric(ms_df$injured, na.rm = TRUE)
 ms_df$total_victims = as.numeric(ms_df$total_victims, na.rm = TRUE)
 
+#Add a column that counts each row as one mass shooting (this is simply to count the number of mass shootings for year in the aggregate table)
+ms_df <- ms_df %>% 
+  mutate("mass_shootings" = 1)
+
 #Create aggregated data table showing:
 # - each year
 # - total number of victims
@@ -28,7 +32,7 @@ ms_df$total_victims = as.numeric(ms_df$total_victims, na.rm = TRUE)
 # - total number of fatalities
 agg_table <- ms_df %>% 
   group_by(year) %>% 
-  summarize(across(c(total_victims, injured, fatalities), sum, na.rm = TRUE)) %>% 
-  arrange(desc(year))
+  summarize(across(c(mass_shootings, total_victims, injured, fatalities), sum, na.rm = TRUE)) %>% 
+  arrange(desc(year)) 
 
-agg_table
+View(agg_table)
