@@ -11,10 +11,13 @@ library("ggplot2")
 ms_df <- read.csv("~/Desktop/mass-shootings.csv", stringsAsFactors = FALSE) %>% 
   filter(year != "2023") 
 
-#Add NA where there are missing values in the dataset; fix total_victims for "Tulsa medical center shooting"
+#Clean the data:
+#Add NA where there are missing values in the dataset
 ms_df[ms_df == "-"] <- NA
 ms_df[ms_df == "Unknown"] <- NA
 ms_df[ms_df == "TBD"] <- NA
+
+#Fix total_victims for "Tulsa medical center shooting"
 ms_df[ms_df == "TK"] <- 4
 
 #Make 'total_victims' and 'injured' numeric variables
@@ -27,12 +30,14 @@ ms_df <- ms_df %>%
 
 #Create aggregated data table showing:
 # - each year
+# - number of shootings
 # - total number of victims
 # - total number of injuries
 # - total number of fatalities
 agg_table <- ms_df %>% 
   group_by(year) %>% 
   summarize(across(c(mass_shootings, total_victims, injured, fatalities), sum, na.rm = TRUE)) %>% 
-  arrange(desc(year)) 
+  arrange(desc(year)) %>% 
+  slice_head(n = 13)
 
-View(agg_table)
+agg_table
