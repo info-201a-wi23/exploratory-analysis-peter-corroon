@@ -1,9 +1,26 @@
 ---
-title: "Exploratory Analysis"
+title: "Mass Shooting Data Exploratory Analysis"
+date: "02/20/2023"
 output: html_document
 ---
 
-## Project title
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE, message = FALSE)
+
+# load necessary libraries
+library(knitr)
+library(dplyr)
+library(ggplot2)
+library(tidyverse)
+library(reshape2)
+
+# source all R files
+source('summary_info.R')
+source('agg_table.R')
+source('Chart1.R')
+source('chart2.R')
+```
 
 ## “Uncovering the Patterns: Analyzing Mass Shootings in America since 1982”
 
@@ -14,9 +31,7 @@ output: html_document
 - Michael Pham (mpham2@uw.edu)
 - Peter Corroon (pc238870@uw.edu) 
 
-### Date
-
-Winter 2022
+### Winter 2023
 
 ### Abstract
 
@@ -61,7 +76,6 @@ Swanson, Jeffrey W., et al. “Mental illness and reduction of gun violence and 
 
 ### The Dataset
 
-
 > Where did you find the data? Please include a link to the data source  
 
 The data set we are using is called “Mother Jones - Mass Shootings Database, 1982 - 2023.” We found this data set on the [Mother Jones website.](https://www.motherjones.com/politics/2012/12/mass-shootings-mother-jones-full-data/)
@@ -103,13 +117,23 @@ The concept of mass shootings used to be a very broad term. It was only recently
 
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
+According to this data set, there have been `r summary_info$num_mass_shootings` total mass shootings within the United States between the years of 1982 and 2022. Dreadfully, these have resulted in a total of `r summary_info$num_fatalities` fatalities. The year(s) with the highest number of mass shootings were `r summary_info$year_most_shootings[1]` with `r summary_info$case_most_victims[2]` of these tragedies. These incidents have become a particular topic of concern among educational settings, as there have been `r summary_info$school_shootings` mass shootings that have taken place in schools. Out of all the mass shootings in this data set however, the most detrimental was `r summary_info$case_most_victims` which afflicted `r summary_info$case_most_victims_amount` victims. This case and others alike reveal just how harmful firearms can be when in the wrong hands. While some argue against the legality of any guns, mass shootings in particular have sparked uproar by many regarding the legality of powerful semiautomatic weapons, and whether people should have access to them. This data set reveals that a staggering `r `summary_info$percent_semiauto`% of mass shootings involved the use of semiautomatic weapons. Whether it be stricter gun control or other possible solutions, it is clear that a change must occur in order to prevent these tragedies from continuing to happen.
 
 ### Table
 
-Include a table of aggregate information
+```{r agg_table}
+table_caption <- paste("US Mass Shootings Since 2010")
 
-Describe why you included the table and what information it reveals
+knitr::kable(agg_table,
+             col.names = c('Year',
+                           'Mass Shootings',
+                           'Total Victims', 
+                           'Injuries', 
+                           'Fatalities'),
+             caption = table_caption)
+```
+
+This table was included to display mass shootings since 2010 and the impact they have had. This table reveals the number of shootings for each year, the total victims afflicted, and the number of injuries and deaths caused by these horrible events. The numbers from this table display the harsh reality of these tragic incidents, and that they continue to happen each year with an increase over time. 
 
 ### Chart 1
 
@@ -119,12 +143,8 @@ Describe why you chose this chart and what information it reveals
 
 Here's an example of how to run an R script inside an RMarkdown file:
 
-``````{r message = FALSE, warning = FALSE, echo = FALSE, code = readLines("Chart1.R") }
+``````{r, echo = FALSE, code = readLines("chart1_example.R")}
 ``````
-
-This visualization includes a map of where mass shootings have occurred in the United States through 2022. This visualization shows the distribution of where each of these mass shootings have occurred and also offers insight into where they have not occurred, like the Mountain West states of Montana and the Dakotas. Most of the shootings occur in areas where it is common knowledge that there are highly populated cities, like the greater Seattle area, San Francisco, and Los Angeles areas. This map also gives an impression of how many shootings there have been in the last decades, knowing that this is a conservative estimate with a dataset with very specific requirements to qualify for "mass shooting," and there are still this many spots of red throughout the US. 
-
-
 
 ### Chart 2
 
