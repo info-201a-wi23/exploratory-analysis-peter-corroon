@@ -1,48 +1,34 @@
-#Calculating 5 summary values
-
-#Load in the data set
-ms_df <- read.csv("~/Desktop/mass-shootings.csv", stringsAsFactors = FALSE) %>% 
-  filter(year != "2023") 
-
-View(ms_df)
+#AGGREGATE TABLE
+#Use dplyr to produce a table of aggregate information from the data set
+# ------------------------------------------------------------------------------
 
 #Load in necessary libraries
 library("dplyr")
 library("tidyverse")
 library("ggplot2")
 
-#Add NA where there are missing values in the dataset
+#Load in the data set
+ms_df <- read.csv("~/Desktop/mass-shootings.csv", stringsAsFactors = FALSE) %>% 
+  filter(year != "2023") 
+
+#Add NA where there are missing values in the dataset; fix total_victims for "Tulsa medical center shooting"
 ms_df[ms_df == "-"] <- NA
 ms_df[ms_df == "Unknown"] <- NA
 ms_df[ms_df == "TBD"] <- NA
 ms_df[ms_df == "TK"] <- 4
 
-#Make victims and injuries numeric
+#Make 'total_victims' and 'injured' numeric variables
 ms_df$injured = as.numeric(ms_df$injured, na.rm = TRUE)
 ms_df$total_victims = as.numeric(ms_df$total_victims, na.rm = TRUE)
 
-#Create a df displaying the total fatalities per year
-fatalities_by_year <- ms_df %>% 
-  group_by(year) %>% 
-  summarize(fatalities = sum(fatalities)) 
-View(fatalities_by_year)
-
-#Create a df displaying the total injuries per year
-injuries_by_year <- ms_df %>% 
-  group_by(year) %>% 
-  summarize(injured= sum(injured, na.rm = TRUE)) 
-View(injuries_by_year)
-
-#create a df displaying the total victims per year
-victims_by_year <- ms_df %>% 
-  group_by(year) %>% 
-  summarize(total_victims = sum(total_victims, na.rm = TRUE)) 
-View(victims_by_year)
-
-#Create aggregated data table
+#Create aggregated data table showing:
+# - each year
+# - total number of victims
+# - total number of injuries
+# - total number of fatalities
 agg_table <- ms_df %>% 
-  select(year, total_victims, injured, fatalities) %>% 
-  arrange(desc(fatalities)) %>% 
-  slice_head(n = 5)
+  group_by(year) %>% 
+  summarize(across(c(total_victims, injured, fatalities), sum, na.rm = TRUE)) %>% 
+  arrange(desc(year))
 
 agg_table
