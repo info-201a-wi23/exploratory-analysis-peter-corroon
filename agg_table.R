@@ -11,7 +11,6 @@ library("ggplot2")
 ms_df <- read.csv("Mass-Shootings-Database-copy.csv", stringsAsFactors = FALSE) %>% 
   filter(year != "2023") 
 
-View(ms_df)
 #Clean the data:
 #Add NA where there are missing values in the dataset
 ms_df[ms_df == "-"] <- NA
