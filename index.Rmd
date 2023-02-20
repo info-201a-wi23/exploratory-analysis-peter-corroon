@@ -140,14 +140,11 @@ This table was included to display mass shootings since 2010 and the impact they
 
 ### Chart 1
 
-Include a chart
-
-Describe why you chose this chart and what information it reveals
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, code = readLines("chart1_example.R")}
+``````{r message = FALSE, warning = FALSE, echo = FALSE, code = readLines("Chart1.R") }
+                                                                                                 
 ``````
+
+This visualization includes a map of where mass shootings have occurred in the United States through 2022. This visualization shows the distribution of where each of these mass shootings have occurred and also offers insight into where they have not occurred, like the Mountain West states of Montana and the Dakotas. Most of the shootings occur in areas where it is common knowledge that there are highly populated cities, like the greater Seattle area, San Francisco, and Los Angeles areas. This map also gives an impression of how many shootings there have been in the last decades, knowing that this is a conservative estimate with a dataset with very specific requirements to qualify for "mass shooting," and there are still this many spots of red throughout the US. 
 
 ### Chart 2
 
