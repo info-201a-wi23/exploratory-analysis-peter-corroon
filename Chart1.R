@@ -39,16 +39,3 @@ ggplot(data = state_shape) +
   theme(
     plot.background = element_blank(),
     legend.position = "none")
-  
-
-blank_theme <- theme_bw() +
-  theme(
-    axis.line = element_blank(), # remove axis lines
-    axis.text = element_blank(), # remove axis labels
-    axis.ticks = element_blank(), # remove axis ticks
-    axis.title = element_blank(), # remove axis titles
-    plot.background = element_blank(), # remove gray background
-    panel.grid.major = element_blank(), # remove major grid lines
-    panel.grid.minor = element_blank(), # remove minor grid lines
-    panel.border = element_blank(), # remove border around plot
-  )
