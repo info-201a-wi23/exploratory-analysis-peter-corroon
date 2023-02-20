@@ -8,13 +8,13 @@ output: html_document
 knitr::opts_chunk$set(echo = FALSE, message = FALSE)
 
 # load necessary libraries
-library(knitr)
-library(dplyr)
-library(ggplot2)
-library(tidyverse)
-library(reshape2)
-library(parsedate)
-library(lubridate)
+library("knitr")
+library("dplyr")
+library("ggplot2")
+library("tidyverse")
+library("reshape2")
+library("parsedate")
+library("lubridate")
 
 # source all R files
 source('summary_info.R')
@@ -22,6 +22,8 @@ source('agg_table.R')
 source('Chart1.R')
 source('chart2.R')
 source('chart3.R')
+
+
 ```
 
 ## “Uncovering the Patterns: Analyzing Mass Shootings in America since 1982”

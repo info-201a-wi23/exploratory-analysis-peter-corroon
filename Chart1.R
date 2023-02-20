@@ -8,15 +8,11 @@ library("tidyverse")
 shootings_data[shootings_data == "-"] <- NA
 shootings_data[shootings_data == "Unknown"] <- NA
 shootings_data[shootings_data == "TBD"] <- NA
-shootings_data
-
-  install.packages("maps")
   
-  # Load libraries
-  library("ggplot2")
-#  library("plotly")
-  library("dplyr")
-  state_shape <- map_data("state")
+# Load libraries
+library("ggplot2")
+library("dplyr")
+state_shape <- map_data("state")
   
   
 no_na_lat_long <- shootings_data %>%
