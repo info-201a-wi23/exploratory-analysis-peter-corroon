@@ -14,12 +14,15 @@ library(dplyr)
 library(ggplot2)
 library(tidyverse)
 library(reshape2)
+library(parsedate)
+library(lubridate)
 
 # source all R files
 source('summary_info.R')
 source('agg_table.R')
 source('Chart1.R')
 source('chart2.R')
+source('chart3.R')
 ```
 
 ## “Uncovering the Patterns: Analyzing Mass Shootings in America since 1982”
@@ -153,10 +156,11 @@ Here's an example of how to run an R script inside an RMarkdown file:
 
 ``````
 
-We chose to visualize the number of deaths and injuries by gun type in order to determine which weapon results in the worst casualties. We specifically wanted to depict the difference between semiautomatic weapons and automatic weapons. As seen in the chart, semiautomatic weapons resulted in the most deaths and injuries, with semiautomatic handguns having the most casualties for mass shootings where only one tpye of weapon was used. We can also see that when more than one type of weapon was used the total number of casualties almost triples, but interestingly this is mostly due to an increase in injuries not deaths. 
+We chose to visualize the number of deaths and injuries by gun type in order to determine which weapon results in the worst casualties. We specifically wanted to depict the difference between semiautomatic weapons and automatic weapons. As seen in the chart, semiautomatic weapons resulted in the most deaths and injuries, with semiautomatic handguns having the most casualties for mass shootings where only one type of weapon was used. We can also see that when more than one type of weapon was used the total number of casualties almost triples, but interestingly this is mostly due to an increase in injuries not deaths. 
 
 ### Chart 3
 
-Include a chart
+``````{r message = FALSE, warning = FALSE, echo = FALSE, code = readLines("chart3.R") }
 
-Describe why you chose this chart and what information it reveals
+``````
+We chose to look at the cumulative victims of mass shootings to observe how it has changed over time. This allows us to see how the patterns of mass shootings has developed in the United States. Overall, the rate of victims from mass shootings increases at a steady rate. We can see that around 2017, the number of victims over time dramtically increases in compared to the past. This can be largely attributed to the Las Vegas Strip Massacre where 604 people were victims. Along with that, increased victim counts still last into 2022. It begs the question of whether this increased rate will remain.
