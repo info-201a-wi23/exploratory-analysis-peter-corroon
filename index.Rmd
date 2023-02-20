@@ -44,7 +44,7 @@ The crux of our project is to ask what patterns and trends can be identified fro
 
 Gun violence, and specifically mass shootings, are commonly brought up as an issue within the United States, along with extensive debate on how to deal with this issue. With the increase in media consumption and news circulating rapidly in today’s society, it can be easy to be very fearful of these incidents as their impact continues to be larger and larger. Even though mass shootings continue to be a recurring problem in this country, there have yet to be robust solutions that alleviate these incidents. Because of this, we have decided to examine a dataset covering mass shootings in the United States over the last 40 years in order to study patterns and trends that may prove beneficial when implementing solutions to this problem. In order to delve deeper into this data, we are looking to answer these questions:
  
- - How has the frequency of mass shootings changed over time?
+ - How has the number of mass shootings and their impact changed over time?
  - How does the occurrence of mass shootings differ by location?
  - How does the number of incidents change by gender?
  - Does the type of weapon correlate with patterns in the number of dead or injured? 
