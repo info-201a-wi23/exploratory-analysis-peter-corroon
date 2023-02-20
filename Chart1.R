@@ -1,7 +1,7 @@
 #Chart 1
 rm(list = ls())
 
-shootings_data <- read.csv("shootingsdataset.csv")
+shootings_data <- read.csv("Mass-Shootings-Database-copy.csv", stringsAsFactors = FALSE)
 library("dplyr")
 library("tidyverse")
 
@@ -45,18 +45,6 @@ ggplot(data = state_shape) +
     plot.background = element_blank(),
     legend.position = "none")
   
-
-  
-  
-  blank_theme
-
-
-
-
-
-
-
-
 
 blank_theme <- theme_bw() +
   theme(
