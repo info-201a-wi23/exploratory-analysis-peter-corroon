@@ -23,7 +23,6 @@ num_lat_long <- transform(no_na_lat_long,
                                 latitude = as.numeric(latitude))
 num_lat_long <- transform(num_lat_long, longitude = as.numeric(longitude))
 
-str(num_lat_long)
   
 ggplot(data = state_shape) +
   geom_polygon(aes(x = long, 
