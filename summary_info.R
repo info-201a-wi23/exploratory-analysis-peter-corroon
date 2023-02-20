@@ -31,12 +31,12 @@ num_mass_shootings <- ms_df %>%
 
 #2. The total number of fatalities
 num_fatalities <- ms_df %>% 
-  summarize(total_fatalities = sum(fatalities)) %>% 
+  summarize(total_fatalities = sum(fatalities, na.rm = TRUE)) %>% 
   pull(total_fatalities)
 
 #3. The number of mass shootings that happened at schools
 school_shootings <- ms_df %>% 
-  group_by(location.1) %>% 
+  group_by(location.1, na.rm = TRUE) %>% 
   filter(location.1 == "School") %>% 
   nrow()
 
