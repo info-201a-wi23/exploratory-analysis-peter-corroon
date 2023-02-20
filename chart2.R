@@ -6,7 +6,7 @@ library(ggplot2)
 library(reshape2)
 
 #read in data
-shootings_df <- read.csv("~/Desktop/Mass-Shootings-Database.csv", stringsAsFactors = FALSE)
+shootings_df <- read.csv("Mass-Shootings-Database-copy.csv", stringsAsFactors = FALSE)
 
 
 shootings_df[shootings_df == "-"] <- NA
