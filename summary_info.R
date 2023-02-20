@@ -8,7 +8,7 @@ library("tidyverse")
 library("ggplot2")
 
 #Load in the data set
-ms_df <- read.csv("~/Desktop/Mass-Shootings-Database.csv", stringsAsFactors = FALSE) %>% 
+ms_df <- read.csv("Mass-Shootings-Database-copy.csv", stringsAsFactors = FALSE) %>% 
   filter(year != "2023") 
 
 #Clean the data:
