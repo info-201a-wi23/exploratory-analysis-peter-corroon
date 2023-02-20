@@ -8,9 +8,10 @@ library("tidyverse")
 library("ggplot2")
 
 #Load in the data set
-ms_df <- read.csv("~/Desktop/mass-shootings.csv", stringsAsFactors = FALSE) %>% 
+ms_df <- read.csv("~/Desktop/Mass-Shootings-Database.csv", stringsAsFactors = FALSE) %>% 
   filter(year != "2023") 
 
+View(ms_df)
 #Clean the data:
 #Add NA where there are missing values in the dataset
 ms_df[ms_df == "-"] <- NA
