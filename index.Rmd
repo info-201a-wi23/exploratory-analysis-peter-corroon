@@ -46,7 +46,7 @@ Gun violence, and specifically mass shootings, are commonly brought up as an iss
  
  - How has the number of mass shootings and their impact changed over time?
  - How does the occurrence of mass shootings differ by geographic location?
- - How does the occurrence of mass shootings differ by the type of location (like workplace or school)?
+ - How does the occurrence of mass shootings differ by the type of location (like workplace or schools)?
  - Does the type of weapon correlate with patterns in the number of dead or injured? 
  - Is there a connection between mass shootings and mental health issues?
 
@@ -54,7 +54,7 @@ By further evaluating the context and factors behind mass shootings, better poli
 
 ### Related Work  
 
-Mass shootings, defined as incidents in which four or more people are shot and killed, have become a disturbingly common occurrence over time in the United States. According to data from the [Gun Violence Archive](https://www.gunviolencearchive.org/.), the number of mass shootings in the US has increased steadily since the 1980s, with a particularly sharp rise in recent years (Gun Violence Archive, 2023). This trend has led to intense debates about the relationship between mass shootings and gun control. The BBC article [“Gun violence in US and what the statistics tell us.”](https://www.bbc.com/news/world-us-canada-41488081.) discusses debates over access to mass-destructive weaponry. Proponents of stricter gun laws argue that easier access to firearms contributes to the frequency of these incidents, while opponents claim that such laws do not effectively address the root causes of violence (BBC, 2023). 
+Mass shootings, defined as incidents in which four or more people are shot and killed, have become a disturbingly common occurrence over time in the United States. According to data from the [Gun Violence Archive](https://www.gunviolencearchive.org/.), the number of mass shootings in the US has increased steadily since the 1980s, with a particularly sharp rise in recent years (Gun Violence Archive, 2023). This trend has led to intense debates about the relationship between mass shootings and gun control. The BBC article [“Gun violence in US and what the statistics tell us”](https://www.bbc.com/news/world-us-canada-41488081.) discusses debates over access to mass-destructive weaponry. Proponents of stricter gun laws argue that easier access to firearms contributes to the frequency of these incidents, while opponents claim that such laws do not effectively address the root causes of violence (BBC, 2023). 
 
 In addition to the debate about gun control, there is growing recognition of the importance of addressing mental health as well as substance abuse in the context of mass shootings. Mainstream media tends to link these violent instances with illness. An epidemiologic study titled ["Mental illness and reduction of gun violence and suicide: bringing epidemiologic research to policy."](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4211925/#.) performed by Swanson et al. (2015) shows that this association is oftentimes misleading and that those who suffer from mental illness are not always violent, but are at higher risk for suicide which accounts for over half the nation's gun-related deaths. While it is not accurate to suggest that mental illness is a key cause of mass shootings, addressing the needs of those struggling with mental health challenges is seen by some as an important step in reducing the frequency of these incidents. 
 
